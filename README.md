@@ -52,3 +52,5 @@ npm start
 ```
 
 - El frontend estará disponible en `http://localhost:3000`.
+
+- Encuentra instrucciones más detalladas dentro de las carpetas frontend y backend
