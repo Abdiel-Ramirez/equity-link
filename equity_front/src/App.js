@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Swal from "sweetalert2";
 import LoginForm from "./components/LoginForm";
 import Dashboard from "./components/Dashboard";
+import LoadingPage from "./components/LoadingPage";
 
 export default function App() {
   const [user, setUser] = useState(null);
@@ -36,7 +37,7 @@ export default function App() {
     fetchUser();
   }, []);
 
-  if (loading) return <p>Cargando...</p>;
+  if (loading) return <LoadingPage/>;
   if (!user) return <LoginForm onLogin={fetchUser} />;
   return <Dashboard user={user} />;
 }

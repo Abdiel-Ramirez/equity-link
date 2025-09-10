@@ -7,6 +7,20 @@
 
 ## Esta aplicación consiste en un dashboard con **autenticación**, **roles y permisos**, y manejo de **facturas**.
 
+## Capturas de pantalla
+
+### Login
+
+![Screenshot del Login](./docs/login.png)
+
+### Facturas
+
+![Screenshot de Facturas](./docs/facturas.png)
+
+### Usuarios
+
+![Screenshot de Usuarios](./docs/usuarios.png)
+
 ## Estructura del proyecto
 
 - `/frontend` → Aplicación ReactJS.
