@@ -8,18 +8,19 @@ use Spatie\Permission\Models\Permission;
 
 class RolesAndPermissionsSeeder extends Seeder
 {
-    public function run(): void
+    public function run()
     {
-        // Crear permisos si no existen
-        $viewInvoices = Permission::firstOrCreate(['name' => 'view-invoices']);
-        $uploadInvoices = Permission::firstOrCreate(['name' => 'upload-invoices']);
+        // Permisos
+        $perms = ['view-invoices', 'upload-invoices', 'manage-users'];
+        foreach ($perms as $perm) {
+            Permission::firstOrCreate(['name' => $perm]);
+        }
 
-        // Crear rol admin y asignarle permisos
+        // Roles
         $admin = Role::firstOrCreate(['name' => 'admin']);
-        $admin->syncPermissions([$viewInvoices, $uploadInvoices]);
+        $admin->syncPermissions(Permission::all());
 
-        // Crear rol user y asignarle permisos
         $user = Role::firstOrCreate(['name' => 'user']);
-        $user->syncPermissions([$viewInvoices]);
+        $user->syncPermissions([]);
     }
 }

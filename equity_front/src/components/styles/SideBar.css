@@ -1,0 +1,91 @@
+
+.change-width{
+  transition: all 0.2s ease;
+}
+
+
+.sidebar {
+
+  position: fixed;
+  top: 60px; 
+  left: 0;
+  width: 200px;
+  height: calc(100vh - 60px);
+  background-color: var(--card-bg); 
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 6px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+  z-index: 900;
+}
+
+.oppened .small-items,
+.closed .big-items {
+    display: none;
+}
+
+.sidebar.closed{
+  width: 60px;
+  
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.sidebar-list li {
+  padding: 0.75rem 1.5rem;
+  margin-right: 8px;
+  margin-bottom: 0.5rem;
+  border-radius: 12px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.sidebar-list li:hover {
+  background-color: var(--accent); 
+  color: #fff;
+  transform: translateX(4px);
+}
+
+.sidebar-list li.hide{
+  cursor: default;
+}
+
+.sidebar-list li.hide:hover{
+  background-color: #00000000; 
+  color: var(--text);
+  transform: translateX(0px);
+}
+
+
+.sidebar-list li.active {
+  background-color: #48486f;
+  color: #fff;
+}
+
+.isOpen-button{
+  padding: 0;
+}
+
+.isOpen-button button{
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+
+@media screen and (max-width:1150px) {
+  .sidebar, .change-width{
+    display: none;
+  }
+  
+}

@@ -1,0 +1,21 @@
+
+.invoice-card {
+  max-width: 30rem;
+}
+
+.invoice-card p {
+  margin-bottom: 1rem;
+}
+
+.invoice-upload-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+  width: 100%;
+}
+
+.invoice-upload-input button {
+  width: 100%;
+
+}
